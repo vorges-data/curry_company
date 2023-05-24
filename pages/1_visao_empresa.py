@@ -202,12 +202,12 @@ st.sidebar.markdown("""---""") #Colocar um divider
 # filtro
 st.sidebar.markdown('## Selecione uma data limite' )
 
-date_slider = st.sidebar.slider(
-    'Até qual valor?',
-    value = pd.datetime(2022, 4, 13),
-    min_value = pd.datetime(2022, 2, 11),
-    max_value = pd.datetime(2022, 4, 6),
-    format='DD-MM-YYYY')
+#date_slider = st.sidebar.slider(
+#    'Até qual valor?',
+#    value = pd.to_datetime(2022, 4, 13),
+#   min_value = pd.datetime(2022, 2, 11),
+#    max_value = pd.datetime(2022, 4, 6),
+#    format='DD-MM-YYYY')
 
 st.sidebar.markdown("""---""") #Colocar um divider
 
@@ -226,8 +226,8 @@ st.sidebar.markdown('### Powered by Vorges Data')
 #===========================
 
 # Filtro de Data
-linhas_selecionadas = df3['Order_Date'] < date_slider
-df3 = df3.loc[linhas_selecionadas, :]
+#linhas_selecionadas = df3['Order_Date'] < date_slider
+#df3 = df3.loc[linhas_selecionadas, :]
 
 #Filtro de trânsito
 linhas_selecionadas = df3['Road_traffic_density'].isin( traffic_options )
